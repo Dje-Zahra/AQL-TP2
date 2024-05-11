@@ -1,0 +1,40 @@
+Comme :     public void jouer(Joueur joueur, De de1, De de2) throws JeuFermeException;
+alors on doit mocker : "Joueur , De" .car xiste dependance
+et comme le constructeur de jeu et on a besoin de vérifier que le jeu est ouvert --->check Banque ===>
+on doit mocker "Banque" aussi.
+
+2/
+
+cas simple-win : Le joueur mise une certaine somme.
+                 La somme est débitée du joueur.
+                 Les dés sont lancés.
+                 La somme des lancers donne 7.
+                 Le joueur gagne le double de sa mise.
+                 La somme est créditée sur le compte du joueur.
+
+
+cas simple-lose : Le joueur mise une certaine somme.
+                  La somme est débitée du joueur.
+                  Les dés sont lancés.
+                  La somme des lancers ne donne pas 7.
+                  Le jeu se termine et le joueur ne gagne rien.
+
+
+cas user-with-no-money : Le joueur mise une somme.
+                         La somme est supérieure à celle qu'il possède.
+                         Le jeu se termine et une exception est levée.
+
+
+cas banque-rupt: Le joueur mise une certaine somme.
+                 La somme est débitée du joueur.
+                 Les dés sont lancés.
+                 La somme des lancers donne 7.
+                 Le joueur gagne le double de sa mise.
+                 La banque est insolvable.
+                 Le jeu se termine et le joueur ne reçoit pas ses gains.
+
+
+cas bloked: La banque n'a pas de l'argent. jeu fermé
+
+
+4/ i suppose test d'interaction psk tt s'arrête avant de commancer alors ces meth testées ne doivent pas être ampplées
